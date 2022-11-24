@@ -1,0 +1,1002 @@
+<html>
+<head>
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<title>
+	RATE DISPLAY - Aarambha Technologies PVT. LTD.
+	</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #9b59b6;
+	font-family: 'Open Sans', sans-serif;
+	/*display: flex;*/
+	/*align-items: center;*/
+	/*justify-content: center;*/
+
+	margin: 0;
+}
+
+.mero-container {
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	width: 400px;
+	max-width: 100%;
+}
+
+.mero-header {
+	border-bottom: 1px solid #f0f0f0;
+	background-color: #f7f7f7;
+	padding: 10px 40px;
+}
+
+.mero-header h2 {
+	margin: 0;
+}
+
+.form {
+	padding: 30px 40px;	
+}
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	padding-right:55px;
+	width: 100%;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control i {
+	font-size: 25px;
+	/*position: absolute;
+	top: 40px;
+	right:5px;*/
+	/*color:#2ecc71;*/
+	color: white;
+
+}
+.form-control span{
+	background-color: orange;
+	position: absolute;
+	padding: 12px;
+	padding-top: 7px;
+	padding-left: 12px;
+	padding-right: 12px;
+	top: 28px;
+	right: 2px;
+	bottom:21.5px;
+	border-radius: 0px 2.5px 2.5px 0px;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form button {
+	background-color: #8e44ad;
+	border: 2px solid #8e44ad;
+	border-radius: 10px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+
+}
+
+
+
+
+
+.my-nav{
+	z-index: 33;
+	position: fixed;
+  	height: 80px;
+   width:100%;
+   background: #35302d;
+
+}
+.my-nav ul{
+	padding: 0px;
+	margin: 10px;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.my-nav ul {
+	margin: 0px;
+	/*background-color: grey;*/
+	list-style-type: none;
+
+	}
+.my-nav ul li {
+	border-radius: 0px 0px 20px 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	height:80px;
+	background-color: darkcyan;
+
+}
+.my-nav ul li a{
+	margin: 20px;
+	color: white;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 35px;
+	text-transform: uppercase;
+}
+
+#my-content{
+padding-top: 80px;
+padding-bottom: 50px;
+}
+
+
+
+.hamro-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+
+#my-flex{
+	display:flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items	: 	center;
+	padding: 40px;
+}
+/*notification*/
+.notifier{
+	
+	
+}
+
+.notification{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: #fff;
+  padding: 20px 15px 20px 20px;
+  border-radius: 10px;
+  border-left: 5px solid #2ecc71;
+  border-top: 5px solid #2ecc71;
+  box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
+  width: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.notification .details{
+  margin-left: 15px;
+}
+.details span{
+  font-size: 20px;
+  font-weight: 500;
+}
+.details p{
+  color: #878787;
+}
+/*notification*/
+@media (max-width: 500px){
+	.hamro-container	{
+		display: flex;
+		flex-direction: column	;
+		justify-content: center;
+
+		align-items: center;
+		width: 100%;
+		padding: 20px;
+	}
+
+	.mero-container	{
+		margin: 10px;
+	}
+
+
+
+	/*nav customization*/
+
+	.my-nav	{
+		height:50px;
+	}
+	#my-content	{
+		padding-top: 50px;
+	}
+	.my-nav ul li {
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 8px;
+	margin-left: 8px;
+	margin-right: 10px;
+	height:50px;
+	background-color: darkcyan;
+
+}
+.my-nav ul li a{
+	margin: 5px;
+	color: white;
+	font-weight: 200;
+	font-size: 20px;
+}
+
+
+	/*nav customization*/
+	#my-flex{
+		display:flex;
+		flex-direction: column	;
+		justify-content: center;
+
+		align-items: center;
+	}
+
+
+/*notification customization*/
+.notification{
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	background: #fff;
+  padding: 10px 7px 10px 10px;
+  border-radius: 10px;
+  border-left: 2.5px solid #2ecc71;
+  border-top: 2.5px solid #2ecc71;
+  box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
+  width: 215px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notification .details{
+  margin-left: 7px;
+}
+.details span{
+  font-size: 12px;
+  font-weight: 250;
+}
+.details p{
+	font-size:12px;
+	margin: 0px;
+  color: #878787;
+}
+
+.notification.close-icon{
+  color: #878787;
+  font-size: 23px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  transition: all 0.3s ease;
+}
+
+
+/*notification customization*/
+
+
+
+
+
+}
+
+.hidden{
+	display: none;
+}
+
+#show-hide-advance{
+		background-color: #8e44ad;
+	border: 2px solid #8e44ad;
+	border-radius: 10px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+}
+
+/*footer css*/
+
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #263238;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+.my-icons{
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.my-icons a{
+    text-decoration: none;
+    font-size:20px;
+    margin: 5px;
+    color: #f4f4f4;
+}
+
+.company-name{
+    font-size: 16px;
+    margin-top:10px;
+
+}
+
+@media (max-width: 500px){
+	.my-icons{
+		padding-bottom: 0px;
+	}
+   .footer{
+   	 font-size: 50%;
+
+   }
+       
+   
+}    
+
+@media(min-width: 501px) and (max-width: 768px){
+	.my-icons{
+		padding-bottom: 10px;
+	}
+    .footer{
+    	    font-size: 50%;
+
+
+    }
+  
+}    
+/*footer css ends*/
+
+
+	</style>
+	</head>
+	<body>
+
+		<nav class="my-nav">
+			<ul>
+				<li>
+					<a href="#settings">AT</a>
+				</li>
+				<li>
+					<a href="#advance-settings">Settings</a>
+				</li>
+				<li>
+					<a href="#rate-settings">Rate Update</a>
+				</li>
+			</ul>
+		</nav>
+
+
+<div id="my-content">
+
+
+
+<div id="rate-settings" class="hamro-container">
+  <div id ="wifi-settings" class="mero-container">
+  <div class="mero-header">
+    <h2>RATE Settings</h2>
+  </div>
+  <form method="GET" id="form" class="form" action="">
+    <div class="form-control">
+      <label for="gold-rate-buy">GOLD BUY</label>
+      <input type="number" placeholder="99999" id="gold-rate-buy" min="0" max="999999" name="gold-buy" onchange="goldUpdate()" required="true" />
+      
+      <!-- <span><i class="fa fa-wifi"></i></span> -->
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <label for="gold-rate-sell">GOLD SELL</label>
+      <input type="number" placeholder="101111" id="gold-rate-sell" min="0" max="999999" name="gold-sell" required="true"/>
+      <!-- <span onclick="toggleWiFiPass();"> <i class="fa fa-eye" ></i></span> -->
+
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <label for="silver-rate-buy">SILVER BUY</label>
+      <input type="number" placeholder="999" id="silver-rate-buy" min="0" max="9999" name="silver-buy" required="true" />
+      <!-- <span onclick="toggleWiFiPass();"> <i class="fa fa-eye" ></i></span> -->
+
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <label for="silver-rate-sell">SILVER SELL</label>
+      <input type="number" placeholder="1111" id="silver-rate-sell" min="0" max="9999" name="silver-sell" required="true"/>
+      <!-- <span onclick="toggleWiFiPass();"> <i class="fa fa-eye" ></i></span> -->
+
+      <small>Error message</small>
+    </div>
+
+    <button type="submit" id="rate-submit">UPDATE RATE</button>
+  </form>
+</div>
+	<button id="show-hide-advance">SHOW ADVANCE</button>
+</div>
+
+
+<div id="advance-settings" class="hamro-container hidden">
+
+<div id ="brightness-settings" class="mero-container">
+  <div class="mero-header">
+    <h2>Brightness Settings</h2>
+  </div>
+  <form id="form" class="form">
+    <div class="form-control">
+      <label for="brightness">BRIGHTNESS</label>
+      <input type="number" placeholder="Brightness" id="brightness" min="0" max="255" required="true" />
+      
+      <span><i class="fa fa-sun-o"></i></span>
+      <small>Error message</small>
+    </div>
+
+    <button id="brightness-submit">UPDATE BRIGHTNESS</button>
+  </form>
+</div>
+ 
+ 
+
+
+  <div id ="wifi-settings" class="mero-container">
+  <div class="mero-header">
+    <h2>WIFI Settings</h2>
+  </div>
+  <form id="form" class="form">
+    <div class="form-control">
+      <label for="ssid">WIFI SSID</label>
+      <input type="text" placeholder="ENTER WIFI SSID" id="wifi" maxlength="30" required="true" />
+      
+      <span><i class="fa fa-wifi"></i></span>
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <label for="password">Password</label>
+      <input type="password" placeholder="PASSWORD" id="wifipassword" maxlength="20" required="true"/>
+      <span onclick="toggleWiFiPass();">
+      <i class="fa fa-eye" ></i>
+    </span>
+
+      <small>Error message</small>
+    </div>
+
+    <button type = "submit" id="wifi-submit">UPDATE WIFI</button>
+  </form>
+</div>
+<div id ="ap-settings" class="mero-container">
+  <div class="mero-header">
+    <h2>AP Settings</h2>
+  </div>
+  <form id="form" class="form">
+    <div class="form-control">
+      <label for="ssid">AP SSID</label>
+      <input type="text" placeholder="AP SSID" id="apssid" />
+      
+      <span><i class="fa fa-wifi"></i></span>
+      <small>Error message</small>
+    </div>
+    <div class="form-control">
+      <label for="password">Password</label>
+      <input type="password" placeholder="AP PASSWORD" id="appassword" />
+      <span onclick="toggleAPPass();"><i class="fa fa-eye" ></i></span>
+      <small>Error message</small>
+    </div>
+
+    <button>UPDATE AP</button>
+  </form>
+</div>
+ 
+ <!-- <button id="test-btn">TEST BUTTON</button> -->
+  
+</div>
+
+</div>
+
+
+
+ 
+<footer class="footer">
+        <div class="my-icons">
+        		<p>FW V:1.1 | HW V:1.0 |  RATE DISPLAY</p>
+                     <p class="company-name">
+                Aarambha Technologies PVT. LTD. &copy; 2021
+            </p>
+        </div>
+    </footer>
+
+
+
+<div id="notifier" class="hidden">
+	<div class="notification">
+		
+	<div class="details">
+        <span id="notifier-title">SUCCESS</span>
+        <p id="notifier-message">Hurray! Internet is connected!</p>
+   </div>
+       <div class="close-icon"><span>&#10006</span></div>
+</div>
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+
+	var root_url = "";
+	var show_ap_pass = false;
+	var show_wifi_pass = false;
+	var gold_buy_sell_diff = 4000;
+	var silver_buy_sell_diff = 50;
+
+	var gold_buy = document.querySelector("#gold-rate-buy")
+	var gold_sell = document.querySelector("#gold-rate-sell")
+	var silver_buy = document.querySelector("#silver-rate-buy")
+	var silver_sell = document.querySelector("#silver-rate-sell")
+	var rate_submit = document.querySelector("#rate-submit")
+
+
+
+	var wifi = document.querySelector("#wifi")
+	var wifi_pass = document.querySelector("#wifipassword")
+	var wifi_submit = document.querySelector("#wifi-submit")
+
+
+	var brightness = document.querySelector("#brightness")
+	var brightness_submit = document.querySelector("#brightness-submit")
+
+
+	var show_hide_advance = document.querySelector("#show-hide-advance")
+	var advance_settings_hidden = true;
+	var advance_section = document.querySelector("#advance-settings")
+
+	// var test_btn = document.querySelector("#test-btn")
+
+	var notifier = document.querySelector("#notifier")
+	var notifier_title = document.querySelector("#notifier-title")
+	var notifier_message = document.querySelector("#notifier-message")
+
+	gold_buy.addEventListener('change',()=>{
+		if (gold_buy.value != null) 
+		{
+			gold_sell.value = parseInt(gold_buy.value) + parseInt(gold_buy_sell_diff);
+
+		}
+		
+	})
+
+	gold_sell.addEventListener('change',()=>{
+		if(gold_sell.value != null)
+		{
+			gold_buy.value = parseInt(gold_sell.value) - parseInt(gold_buy_sell_diff);
+		}
+		
+	})
+
+	silver_buy.addEventListener('change',()=>{
+		if(silver_buy.value != null)
+		silver_sell.value = parseInt(silver_buy.value) + parseInt(silver_buy_sell_diff);
+
+	})
+	silver_sell.addEventListener('change',()=>{
+		if(silver_sell.value != null)
+		silver_buy.value = parseInt(silver_sell.value) - parseInt(silver_buy_sell_diff);
+
+	})
+
+	rate_submit.addEventListener('click',(e)=>{
+		console.log(e.path[1].checkValidity())
+		if(!e.path[1].checkValidity())
+		{
+			console.log("INVALID")
+			console.log(e.path[1])
+			var children = e.path[1].children;
+			var i ;
+
+			// children.length - 1 to exclude button element
+			for (i = 0; i < children.length -1; i++)
+			{
+				console.log(children[i].children[1].validationMessage)
+				console.log(children[i].children[2].innerText = children[i].children[1].validationMessage)
+				//children[i].children[2].style.visibility = "visible";
+
+
+			}
+
+
+		}
+
+		else
+		{
+
+				console.log("validated")
+				e.preventDefault()
+		console.log("Rate Update Clicked")
+		var gold_buy_rate = gold_buy.value;
+		var gold_sell_rate = gold_sell.value;
+		var silver_buy_rate = silver_buy.value;
+		var silver_sell_rate = silver_sell.value;
+		var date = new Date()
+		var local_date = date.toLocaleDateString();
+		var date_updated = date.toISOString();
+
+
+		var data = {gold_buy:gold_buy_rate, gold_sell:gold_sell_rate,silver_buy:silver_buy_rate,silver_sell:silver_sell_rate,date:local_date,date_updated:date_updated};
+		console.log(JSON.stringify(data))
+
+
+		// toLocaleDateString
+			notifier.classList.remove('hidden')
+			notifier_title.innerText = "RATE UPDATE SENT"
+			notifier_message.innerText = "Successfully Sent"
+			window.setTimeout(() => {
+    notifier.classList.add('hidden')
+  }, 3000)
+		// test  
+  	var xhr = new XMLHttpRequest();
+  	var path = "rateUpdate"
+  	var url = root_url + path;
+
+  	// var url = "http://192.168.100.163/rateUpdate";
+
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      // Typical action to be performed when the document is ready:
+      if(xhr.responseText != null){
+        console.log(xhr.responseText);
+      }
+    }
+  };
+
+  xhr.open("POST", url, true);
+  xhr.send(JSON.stringify(data));
+
+
+		}
+		
+
+
+	},
+	false
+	)
+
+
+
+	wifi_submit.addEventListener("click", (e)=>{
+
+		console.log(e.path[1].checkValidity())
+		if(!e.path[1].checkValidity())
+		{
+			console.log("INVALID")
+			console.log(e.path[1])
+			var children = e.path[1].children;
+			var i ;
+
+			// children.length - 1 to exclude button element
+			for (i = 0; i < children.length -1; i++)
+			{
+				console.log(children[i].children[1].validationMessage)
+				console.log(children[i].children[3].innerText = children[i].children[1].validationMessage)
+				//children[i].children[2].style.visibility = "visible";
+
+
+			}
+
+
+		}
+
+		else{
+
+			e.preventDefault();
+		var _wifi = wifi.value;
+		var _pass = wifi_pass.value;
+
+		var data = {
+			wifi:_wifi, pass:_pass
+		}
+
+			notifier.classList.remove('hidden')
+			notifier_title.innerText = "WIFI UPDATE SENT"
+			notifier_message.innerText = "Successfully Sent"
+			window.setTimeout(() => {
+    notifier.classList.add('hidden')
+  }, 3000)
+		// test  
+  	var xhr = new XMLHttpRequest();
+  	var path = "wifiUpdate"
+  	var url = root_url + path;
+
+  	// var url = "http://192.168.100.163/wifiUpdate";
+
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      // Typical action to be performed when the document is ready:
+      if(xhr.responseText != null){
+        console.log(xhr.responseText);
+      }
+    }
+  };
+
+  xhr.open("POST", url, true);
+  xhr.send(JSON.stringify(data));
+
+
+
+		}
+		
+
+	},false)
+
+
+
+	brightness_submit.addEventListener('click',(e)=>{
+
+			console.log(e.path[1].checkValidity())
+
+		if(!e.path[1].checkValidity())
+		{
+			console.log("INVALID")
+			console.log(e.path[1])
+			var children = e.path[1].children;
+			var i ;
+
+			// children.length - 1 to exclude button element
+			for (i = 0; i < children.length -1; i++)
+			{
+				console.log(children[i].children[1].validationMessage)
+				console.log(children[i].children[3].innerText = children[i].children[1].validationMessage)
+				//children[i].children[2].style.visibility = "visible";
+
+
+			}
+
+
+		}
+
+		else{
+			e.preventDefault()
+		var _brightness = brightness.value;
+	
+
+		var data = {
+			brightness:_brightness
+		}
+
+			notifier.classList.remove('hidden')
+			notifier_title.innerText = "BRIGHT UPDATE SENT"
+			notifier_message.innerText = "Successfully Sent"
+			window.setTimeout(() => {
+    notifier.classList.add('hidden')
+  }, 3000)
+		// test  
+  	var xhr = new XMLHttpRequest();
+  	var path = "bUpdate"
+  	var url = root_url + path;
+
+  	// var url = "http://192.168.100.163/bUpdate";
+
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      // Typical action to be performed when the document is ready:
+      if(xhr.responseText != null){
+        console.log(xhr.responseText);
+      }
+    }
+  };
+
+  xhr.open("POST", url, true);
+  xhr.send(JSON.stringify(data))
+		}
+		
+	},false)
+
+
+
+	// test_btn.addEventListener("click",getRate,false)
+
+	// function goldUpdate(e){
+	// 	console.log("clicked")
+	// 	console.log(e)
+	// 	console.log(this.value)
+
+	// }
+
+
+	function toggleAPPass(){
+		show_ap_pass = !show_ap_pass
+		if(show_ap_pass){
+
+			document.getElementById('appassword').setAttribute("type","text")
+		}
+		else{
+			document.getElementById('appassword').setAttribute("type","password")
+
+		}
+
+	}
+
+		function toggleWiFiPass(){
+		show_wifi_pass = !show_wifi_pass
+		if(show_wifi_pass){
+
+			document.getElementById('wifipassword').setAttribute("type","text")
+		}
+		else{
+			document.getElementById('wifipassword').setAttribute("type","password")
+
+		}
+
+	}
+
+	show_hide_advance.addEventListener("click",()=>{
+		advance_settings_hidden =!advance_settings_hidden
+
+		if(advance_settings_hidden){
+			advance_section.classList.add('hidden')
+			show_hide_advance.innerText = "SHOW ADVANCE"
+
+		}
+		else{
+			advance_section.classList.remove('hidden')
+			show_hide_advance.innerText = "HIDE ADVANCE"
+		}
+
+	})
+
+
+function getRate(){
+
+		var myxhr = new XMLHttpRequest();
+		var path = "getRate"
+  	var url = root_url + path;
+
+  	// var url = "http://192.168.100.163/getRate";
+myxhr.open("GET", url);
+myxhr.send();
+  myxhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      // Typical action to be performed when the document is ready:
+      if(myxhr.responseText != null){
+        console.log(myxhr.responseText);
+        var rate_json = JSON.parse(myxhr.responseText)
+        gold_buy.value = parseInt(rate_json.gold_buy)
+        gold_sell.value = parseInt(rate_json.gold_sell)
+        silver_buy.value = parseInt(rate_json.silver_buy)
+        silver_sell.value = parseInt(rate_json.silver_sell)
+      }
+    }
+  };
+	}	
+
+
+	function getWifi(){
+
+		var myxhr = new XMLHttpRequest();
+		var path = "getWifi"
+  	var url = root_url + path;
+myxhr.open("GET", url);
+myxhr.send();
+  myxhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      // Typical action to be performed when the document is ready:
+      if(myxhr.responseText != null){
+        console.log(myxhr.responseText);
+        var rate_json = JSON.parse(myxhr.responseText)
+        wifi.value = rate_json.wifi
+        wifi_pass.value = rate_json.pass
+      }
+    }
+  };
+	}
+
+	function getBrightness(){
+
+		var myxhr = new XMLHttpRequest();
+		var path = "getB";
+  	var url = root_url + path;
+myxhr.open("GET", url);
+myxhr.send();
+  myxhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      // Typical action to be performed when the document is ready:
+      if(myxhr.responseText != null){
+        console.log(myxhr.responseText);
+        var brightness_json = JSON.parse(myxhr.responseText)
+        brightness.value = parseInt(brightness_json.brightness);
+      
+      }
+    }
+  };
+	}
+
+	window.addEventListener('load', (event) => {
+		console.log(window.location.href);
+		root_url = window.location.href;
+		// root_url = "http://192.168.4.1/";
+  console.log('page is fully loaded');
+  getRate();
+  getWifi();
+  getBrightness();
+});
+
+
+
+
+</script>
+	</body>
+</html>
+
